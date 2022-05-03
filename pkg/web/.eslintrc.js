@@ -12,6 +12,8 @@ module.exports = useTSConfig(
       "setupTests.js",
       "nyc-config.js",
       "jest.config.js",
+      "postcss.config.js",
+      "tailwind.config.js",
     ],
   },
   [path.join(__dirname, "tsconfig.json")]
