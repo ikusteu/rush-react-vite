@@ -382,6 +382,7 @@
    */
   "projects": [
     { "packageName": "scaffold", "projectFolder": "pkg/scaffold" },
-    { "packageName": "web", "projectFolder": "pkg/web" }
+    { "packageName": "web", "projectFolder": "pkg/web" },
+    { "packageName": "ui", "projectFolder": "pkg/ui" }
   ]
 }

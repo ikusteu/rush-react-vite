@@ -1,19 +1,29 @@
 {
-  "name": "web",
+  "name": "ui",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "ui": "workspace:*",
+  "main": "dist/index.js",
+  "exports": {
+    "./dist/style.css": {
+      "import": "./dist/style.css"
+    },
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "default": "./dist.index.es.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "scripts": {
-    "build": "echo \"Skipping web app build as part of rush's bulk 'build' script. To build the app for production run: 'rushx build:prod'\"",
+    "start": "vite",
+    "build": "vite build && tsc",
     "lint": "eslint .",
     "lint:strict": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
-    "build:prod": "BUILD_ENV=production vite build",
-    "start": "vite",
     "test": "jest --watch"
   },
   "browserslist": {
@@ -52,8 +62,9 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^27.5.1",
     "typescript": "4.6.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "vite": "^2.9.5",
-    "vite-plugin-environment": "^1.1.1",
     "vite-plugin-svgr": "^1.1.0",
     "@testing-library/dom": "^8.13.0",
     "tailwindcss": "~3.0.24",
