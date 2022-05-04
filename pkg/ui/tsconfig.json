@@ -5,10 +5,7 @@
     "rootDir": "src",
     "paths": {
       "@/*": ["src/*"]
-    },
-    "declaration": true,
-    "declarationDir": "dist",
-    "emitDeclarationOnly": true
+    }
   },
   "exclude": [
     "node_modules",
